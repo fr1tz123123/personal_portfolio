@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    color: #00ffcc;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.thank-you-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffcc;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #00ffcc; }
+    to { box-shadow: 0 0 30px #00ffcc; }
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #0d0d0d;
+    background: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #008866;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+    </style>
+    <script>
+        setTimeout(() => {
+            window.location.href = "https://fr1tz123123.github.io/personal_portfolio/"; 
+        }, 5000);
+    </script>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully.</p>
+        <p>Redirecting you back in <span id="countdown">5</span> seconds...</p>
+        <a href="https://fr1tz123123.github.io/personal_portfolio/" class="btn">Go Home</a>
+    </div>
+
+    <script>
+        let timeLeft = 5;
+        const countdownEl = document.getElementById("countdown");
+        setInterval(() => {
+            if (timeLeft > 1) {
+                timeLeft--;
+                countdownEl.textContent = timeLeft;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
