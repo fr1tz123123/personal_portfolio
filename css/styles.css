@@ -10956,6 +10956,9 @@ html {
   font-size: 1.75rem;
   line-height: 1.75rem;
 }
+.masthead-heading2 {
+    font-size: 4.5rem;
+}
 .masthead .masthead-subheading {
   font-size: 1.25rem;
 }

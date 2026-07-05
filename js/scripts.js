@@ -46,14 +46,14 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-const roles = ["Web Developer", "Manual/Automation QA Tester", "Web Designer"];
+const roles = ["Web Developer", "Salesforce Developer", "Salesforce Administrator"];
 let currentRoleIndex = 0;
 const roleElement = document.getElementById("role");
 
 // Function to change the role text
 function changeRole() {
   currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-  roleElement.innerHTML = `I am a <span class="role-text">${roles[currentRoleIndex]}</span>`;
+  roleElement.innerHTML = `I'm a <span class="role-text">${roles[currentRoleIndex]}</span>`;
 }
 
 setInterval(changeRole, 2000);
