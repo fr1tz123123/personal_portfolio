@@ -53,7 +53,7 @@ const roleElement = document.getElementById("role");
 // Function to change the role text
 function changeRole() {
   currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-  roleElement.innerHTML = `I'm a <span class="role-text">${roles[currentRoleIndex]}</span>`;
+  roleElement.innerHTML = `<span class="role-text">${roles[currentRoleIndex]}</span>`;
 }
 
 setInterval(changeRole, 2000);

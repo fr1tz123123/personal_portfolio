@@ -10956,9 +10956,6 @@ html {
   font-size: 1.75rem;
   line-height: 1.75rem;
 }
-.masthead-heading2 {
-    font-size: 4.5rem;
-}
 .masthead .masthead-subheading {
   font-size: 1.25rem;
 }
@@ -11241,6 +11238,10 @@ textarea.form-control {
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 
+.name {
+    white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .formcontainer {
     padding: 20px;
@@ -11260,6 +11261,12 @@ textarea.form-control {
   }
 }
 
+@media (max-width: 375px) {
+    .masthead .masthead-heading {
+        font-size: 1.5rem;   
+        line-height: 1.2;
+    }
+}
 
 #backToTop {
   position: fixed;
