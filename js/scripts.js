@@ -59,10 +59,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const downloadBtn = document.getElementById('downloadBtn');
     
     const downloadPDF = () => {
-        const pdfFilePath = './assets/resume/resume-fritz.pdf';
+        const pdfFilePath = './assets/resume/fritzchavez_latestresume.pdf';
         const link = document.createElement('a');
         link.href = pdfFilePath;
-        link.download = 'fritzchavez_latestresume.pdf';
+        link.download = 'fritzchavez_resume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
