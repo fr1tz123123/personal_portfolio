@@ -15,13 +15,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
@@ -30,7 +27,6 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -50,7 +46,6 @@ const roles = ["Web Developer", "Salesforce Developer", "Salesforce Administrato
 let currentRoleIndex = 0;
 const roleElement = document.getElementById("role");
 
-// Function to change the role text
 function changeRole() {
   currentRoleIndex = (currentRoleIndex + 1) % roles.length;
   roleElement.innerHTML = `<span class="role-text">${roles[currentRoleIndex]}</span>`;
@@ -67,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const pdfFilePath = './assets/resume/resume-fritz.pdf';
         const link = document.createElement('a');
         link.href = pdfFilePath;
-        link.download = 'fritz_resume.pdf';
+        link.download = 'fritzchavez_latestresume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -79,16 +74,13 @@ document.addEventListener("DOMContentLoaded", function() {
 // about cert-education-exp function
 document.querySelectorAll('.nav-btn').forEach(function(elem) {
     elem.addEventListener('click', function() {
-        // Hide all collapse elements
         document.querySelectorAll('.collapse').forEach(function(collapse) {
             collapse.classList.remove('show');
         });
 
-        // Show collapse element
         var targetId = this.getAttribute('data-bs-target'); 
         document.querySelector(targetId).classList.add('show');
 
-        // Remove the active class from nav buttons
         document.querySelectorAll('.nav-btn').forEach(function(navBtn) {
             navBtn.classList.remove('active');
         });
